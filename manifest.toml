@@ -7,7 +7,7 @@ name = "HomeBox"
 description.en = "Inventory and organization system built for the Home User"
 description.fr = "Système d'inventaire et d'organisation conçu pour l'utilisateur à domicile"
 
-version = "0.18.0~ynh1"
+version = "0.20.2~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -25,7 +25,6 @@ architectures = "all"
 multi_instance = true
 
 ldap = false
-
 sso = false
 
 disk = "50M"
@@ -46,19 +45,23 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    amd64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.18.0/homebox_Linux_x86_64.tar.gz"
-    amd64.sha256 = "5ee6234896d1afd0eb0b80983b29f3766af794b50bfa04e9f02304f97ceb761e"
-    arm64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.18.0/homebox_Linux_arm64.tar.gz"
-    arm64.sha256 = "93bf0e7e01e730a9cc3ca5e85b73bae4d682bf99a35f6716787290e171965f30"
-    armhf.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.18.0/homebox_Linux_armv6.tar.gz"
-    armhf.sha256 = "460bb6227b09caf98b6b5e27bdd5891b451fe45f6ac9a6f01d090d2119ee3bdc"
-    arm386.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.18.0/homebox_Linux_i386.tar.gz"
-    arm386.sha256 = "09504a9f5784ff0f88440b73296f651d7615bcbe7dc287acdbad8f7e6c291dad"
+    amd64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.20.2/homebox_Linux_x86_64.tar.gz"
+    amd64.sha256 = "727ceefb952c40ca7c4f65f579e17cc7c85b4a2f7cd8928fbf34095e7acd5159"
+    arm64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.20.2/homebox_Linux_arm64.tar.gz"
+    arm64.sha256 = "fc341e15f73c8cc5114b9663b097e971c8686bbf9a8d3827a27c9b3b5af45e69"
+    armhf.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.20.1/homebox_Linux_armv6.tar.gz"
+    armhf.sha256 = "d2b9103123cfd05afbc402c2ede32381f4ad05a9b4a7bc965e52a16a97eb47b0"
+    i386.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.20.2/homebox_Linux_i386.tar.gz"
+    i386.sha256 = "94b2d3f669286f225938c46380f21e1038fe6203079939b04bab5bd2f5c07450"
 
     in_subdir = false
     rename = "homebox"
 
     autoupdate.strategy = "latest_github_release"
+    autoupdate.asset.amd64 = ".*Linux_x86_64.tar.gz$"
+    autoupdate.asset.arm64 = ".*Linux_arm64.tar.gz$"
+    autoupdate.asset.armhf = ".*Linux_armhf.tar.gz$"
+    autoupdate.asset.i386 = ".*Linux_i386.tar.gz$"
 
     [resources.system_user]
     allow_email = true
