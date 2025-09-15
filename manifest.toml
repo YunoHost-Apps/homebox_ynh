@@ -7,7 +7,7 @@ name = "HomeBox"
 description.en = "Inventory and organization system built for the Home User"
 description.fr = "Système d'inventaire et d'organisation conçu pour l'utilisateur à domicile"
 
-version = "0.18.0~ynh1"
+version = "0.21.0~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -19,18 +19,17 @@ admindoc = "https://homebox.software/en/"
 code = "https://github.com/sysadminsmedia/homebox"
 
 [integration]
-yunohost = ">= 12.0.9"
+yunohost = ">= 12.1.17"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 
 ldap = false
-
 sso = false
 
 disk = "50M"
-ram.build = "50M"
-ram.runtime = "50M"
+ram.build = "150M"
+ram.runtime = "85M"
 
 [install]
     [install.domain]
@@ -40,25 +39,28 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
-
 [resources]
 
     [resources.sources]
 
     [resources.sources.main]
-    amd64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.18.0/homebox_Linux_x86_64.tar.gz"
-    amd64.sha256 = "5ee6234896d1afd0eb0b80983b29f3766af794b50bfa04e9f02304f97ceb761e"
-    arm64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.18.0/homebox_Linux_arm64.tar.gz"
-    arm64.sha256 = "93bf0e7e01e730a9cc3ca5e85b73bae4d682bf99a35f6716787290e171965f30"
-    armhf.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.18.0/homebox_Linux_armv6.tar.gz"
-    armhf.sha256 = "460bb6227b09caf98b6b5e27bdd5891b451fe45f6ac9a6f01d090d2119ee3bdc"
-    arm386.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.18.0/homebox_Linux_i386.tar.gz"
-    arm386.sha256 = "09504a9f5784ff0f88440b73296f651d7615bcbe7dc287acdbad8f7e6c291dad"
+    amd64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.21.0/homebox_Linux_x86_64.tar.gz"
+    amd64.sha256 = "84bc710fb45c1ce8e122fc11ca4ba0b4d4f1d2c6ad125b703c87980890b681bd"
+    arm64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.21.0/homebox_Linux_arm64.tar.gz"
+    arm64.sha256 = "01e00bc15892f533870afee54770c59efde6df8e7463ab5d6ad70660a4f19823"
+    armhf.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.21.0/homebox_Linux_armv6.tar.gz"
+    armhf.sha256 = "9c03d968af5047beceb1e47014b023dc3f249de30b5a9342b1f0d755d22348bd"
+    i386.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.21.0/homebox_Linux_i386.tar.gz"
+    i386.sha256 = "b40e92a6afe1a7015d165b0ce81313b892657c7e9a85de4875fc5cf8dac5ef7c"
 
     in_subdir = false
     rename = "homebox"
 
     autoupdate.strategy = "latest_github_release"
+    autoupdate.asset.amd64 = ".*Linux_x86_64.tar.gz$"
+    autoupdate.asset.arm64 = ".*Linux_arm64.tar.gz$"
+    autoupdate.asset.armhf = ".*Linux_armv6.tar.gz$"
+    autoupdate.asset.i386 = ".*Linux_i386.tar.gz$"
 
     [resources.system_user]
     allow_email = true
