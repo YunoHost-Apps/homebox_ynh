@@ -12,7 +12,7 @@ Inventory and organization system built for the Home User
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://homebox.software/en/)
 [![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://demo.homebox.software/home)
-[![Version: 0.21.0~ynh1](https://img.shields.io/badge/Version-0.21.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/homebox/)
+[![Version: 0.22.3~ynh1](https://img.shields.io/badge/Version-0.22.3~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/homebox/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/homebox"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
