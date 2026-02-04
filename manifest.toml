@@ -7,7 +7,7 @@ name = "HomeBox"
 description.en = "Inventory and organization system built for the Home User"
 description.fr = "Système d'inventaire et d'organisation conçu pour l'utilisateur à domicile"
 
-version = "0.22.3~ynh1"
+version = "0.22.3~ynh4"
 
 maintainers = ["eric_G"]
 
@@ -19,7 +19,7 @@ admindoc = "https://homebox.software/en/"
 code = "https://github.com/sysadminsmedia/homebox"
 
 [integration]
-yunohost = ">= 12.1.17"
+yunohost = ">= 12.1.38"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
