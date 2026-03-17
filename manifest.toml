@@ -7,7 +7,7 @@ name = "HomeBox"
 description.en = "Inventory and organization system built for the Home User"
 description.fr = "Système d'inventaire et d'organisation conçu pour l'utilisateur à domicile"
 
-version = "0.22.3~ynh5"
+version = "0.24.2~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -21,7 +21,7 @@ code = "https://github.com/sysadminsmedia/homebox"
 [integration]
 yunohost = ">= 12.1.38"
 helpers_version = "2.1"
-architectures = "all"
+architectures = [ "amd64", "arm64" ]
 multi_instance = true
 
 ldap = false
@@ -44,14 +44,10 @@ ram.runtime = "85M"
     [resources.sources]
 
     [resources.sources.main]
-    amd64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.22.3/homebox_Linux_x86_64.tar.gz"
-    amd64.sha256 = "f04d8b0ae7cc31fd006bd414e9ff0f00ba6bd053b5047b220c8b8b414456ab37"
-    arm64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.22.3/homebox_Linux_arm64.tar.gz"
-    arm64.sha256 = "3626a9a0325bd46d26b60d6fe9add51ceac7ce870c04f1a558e43fe499dd53b1"
-    armhf.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.22.3/homebox_Linux_armv6.tar.gz"
-    armhf.sha256 = "adec8e3b7a647968dd034f53120c253b8b6c5c38b4d5cb5d2796348da5544908"
-    i386.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.22.3/homebox_Linux_i386.tar.gz"
-    i386.sha256 = "7691f34d71e6e3935f986696bddbb86ad212f47f7ab0090fb54293cf0f14e10d"
+    amd64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.24.2/homebox_Linux_x86_64.tar.gz"
+    amd64.sha256 = "5047bb91cae6908c1fcba1cb84e1e8214d1be12b37a06473f3e9fc49d0df3cd3"
+    arm64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.24.2/homebox_Linux_arm64.tar.gz"
+    arm64.sha256 = "b4d66ade38d80845beca8b4073ddb07f6d31acf6284fb4dcb50f4f4133dc69a5"
 
     in_subdir = false
     rename = "homebox"
@@ -59,8 +55,6 @@ ram.runtime = "85M"
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = ".*Linux_x86_64.tar.gz$"
     autoupdate.asset.arm64 = ".*Linux_arm64.tar.gz$"
-    autoupdate.asset.armhf = ".*Linux_armv6.tar.gz$"
-    autoupdate.asset.i386 = ".*Linux_i386.tar.gz$"
 
     [resources.system_user]
     allow_email = true
