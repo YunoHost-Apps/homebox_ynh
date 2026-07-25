@@ -7,6 +7,13 @@
 source /usr/share/yunohost/helpers
 
 #=================================================
+# INITIALIZE AND STORE SETTINGS
+#=================================================
+
+api_key_pepper=$(ynh_string_random --length=45 | base64)
+ynh_app_setting_set --key=api_key_pepper --value=$api_key_pepper
+
+#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Setting up source files..."
