@@ -7,7 +7,7 @@ name = "HomeBox"
 description.en = "Inventory and organization system built for the Home User"
 description.fr = "Système d'inventaire et d'organisation conçu pour l'utilisateur à domicile"
 
-version = "0.26.2~ynh1"
+version = "0.27.0~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -44,10 +44,10 @@ ram.runtime = "85M"
     [resources.sources]
 
     [resources.sources.main]
-    amd64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.26.2/homebox_Linux_x86_64.tar.gz"
-    amd64.sha256 = "078f50ee25de546483d84c0f9ccc587edac6039cde87142fbea39c9ca87dcb05"
-    arm64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.26.2/homebox_Linux_arm64.tar.gz"
-    arm64.sha256 = "a7197a54b830a21be0142c5b4b3dd3a730d5d6a0599aa680d089b4e128d82f12"
+    amd64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.27.0/homebox_Linux_x86_64.tar.gz"
+    amd64.sha256 = "a67e1a7277c3e1f20fc558b77c15b6674874d14410f20272a5536461b3061b51"
+    arm64.url = "https://github.com/sysadminsmedia/homebox/releases/download/v0.27.0/homebox_Linux_arm64.tar.gz"
+    arm64.sha256 = "8d5b29866b4a27c159dfc93b2ff968ca7f2c6cf20b17a1c8943d55c6aec642da"
 
     in_subdir = false
     rename = "homebox"
